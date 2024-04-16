@@ -12,15 +12,13 @@ public class DiarioDeNotas{
             System.out.println("Ola Professor" + nome + "seja bem vindo ");
 
          }else if(usuario.equalsIgnoreCase("Aluno")){
-            System.out.println("Digite o seu nome");
-            String nome  = sc.nextLine();
-            System.out.println("Ola Aluno " + nome + " seja bem vindo ");
+            Aluno aluno = new Aluno();
+            aluno.identificarAluno();
 
          }else{
             System.out.println("Opção invalida ");
 
          }
-         sc.close();
 
     }
 
