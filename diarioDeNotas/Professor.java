@@ -57,7 +57,7 @@ public void imprimir(){
       
     }
 
-    public int somarNotas(int nota1, int nota2, int nota3){
+    public int calucarNotas(int nota1, int nota2, int nota3){
 
     
         System.out.println("Digite a nota1");
