@@ -8,7 +8,8 @@ public class Aluno{
     String email;
     String telefone;
 
-    public void identificarAluno(){
+    public String identificarAluno(String usuario){
+        
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite o seu nome");
         nome = scanner.nextLine();
@@ -27,8 +28,11 @@ public class Aluno{
         System.out.println("Digite o seu telefone");
         telefone = scanner.nextLine();
 
-        System.out.println("Seja bem vindo aluno " + nome);
+        System.out.println("Seja bem vindo " + usuario + nome);
+
         scanner.close();
+
+        return usuario;
     }
     
 
