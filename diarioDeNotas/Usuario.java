@@ -36,7 +36,7 @@ public class Usuario {
        }
     
        
-       public void setTipoUsuario(String nome){
-        this.tipoUsuario = tipoUsuarioome ;
+       public void setTipoUsuario(String tipoUsuario){
+        this.tipoUsuario = tipoUsuario;
        }
 }
