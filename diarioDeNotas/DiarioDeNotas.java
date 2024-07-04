@@ -2,26 +2,34 @@ import java.util.Scanner;
 
 public class DiarioDeNotas{
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Digite 'Aluno' se você for um aluno e 'Professor' se você um professor" );
-        String usuario  = sc.nextLine();
+        String usuario  = scanner.nextLine();
 
          if(usuario.equalsIgnoreCase("Professor")){
-            System.out.println("Digite o seu nome");
-            String nome  = sc.nextLine();
-            System.out.println("Ola Professor" + nome + "seja bem vindo ");
+         Professor professor = new Professor();
+         professor.imprimir();
+         professor.identificarProfessor(usuario);
+
+         System.out.println("O que tem aqui Get?"  + professor.getNome());
+
+         //professor.somarNotas(nota1, nota2, nota3);
 
          }else if(usuario.equalsIgnoreCase("Aluno")){
-            System.out.println("Digite o seu nome");
-            String nome  = sc.nextLine();
-            System.out.println("Ola Aluno " + nome + " seja bem vindo ");
+
+
+
+            Aluno aluno = new Aluno();
+            String nome = aluno.identificarAluno(usuario);
+
+            System.out.println("Seja bem vindo " + usuario + nome);
 
          }else{
             System.out.println("Opção invalida ");
 
          }
-         sc.close();
-
+         scanner.close();
     }
+  
 
 }
